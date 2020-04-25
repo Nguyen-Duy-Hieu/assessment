@@ -1,6 +1,7 @@
 package com.calendar.base;
 
 import com.calendar.pages.HomePage;
+import com.calendar.pages.NewMeetingPage;
 import org.apache.log4j.Logger;
 import com.calendar.utils.APPHelper;
 import com.calendar.utils.Hooks;
@@ -13,10 +14,8 @@ public class BasePOM {
 	private static final Logger LOG = Logger.getLogger(BasePOM.class);
 	
 	HomePage homePage;
+	NewMeetingPage newMeetingPage;
 
-	/*LoginPage loginPage;
-	ProductsPage productsPage;
-	OrderPlacementPage orderPlacementPage;*/
 	APPHelper appiumUtils;
 	AndroidDriver<MobileElement> driver;
 	APPHelper appHelper;
@@ -39,21 +38,9 @@ public class BasePOM {
 		return homePage;
 	}
 	
-	/*public LoginPage loginPage() {
-		if(loginPage == null) 
-			loginPage = new LoginPage();
-		return loginPage;
+	public NewMeetingPage newMeetingPage() {
+		if(newMeetingPage == null)
+			newMeetingPage = new NewMeetingPage();
+		return newMeetingPage;
 	}
-	
-	public ProductsPage productsSearch() {
-		if(productsPage == null) 
-			productsPage = new ProductsPage();
-		return productsPage;
-	}
-	
-	public OrderPlacementPage orderPlacementPage() {
-		if(orderPlacementPage ==null)
-			orderPlacementPage =new OrderPlacementPage();
-		return orderPlacementPage;
-	}*/
 }

@@ -1,5 +1,5 @@
 Feature: Access aCalendar app
-  Verify create new meeting is success in aCalendar APP
+  Veirfy create new meeting is success in aCalendar APP
 
   @regression
   Scenario Outline: Access aCalendar App

@@ -10,7 +10,8 @@ public class PropertyConstants {
 	public static String POSTALCODE = "user.postcode";
 	public static String CARDNAME = "user.cardName";
 	public static String CARDNUMBER = "user.cardNumber";
-	
+
+	public static String HOLIDAY = "holiday";
 	public static String PLATFORM_NAME = "android.realdevice.platform_name";
 	public static String DEVICE_NAME = "android.realdevice.device_name";
 	public static String VERSION = "android.realdevice.version";
