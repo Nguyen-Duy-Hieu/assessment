@@ -10,4 +10,5 @@ public class NewMeetingPagePO {
     public String[] selectContact = new String[] {"xpath","//android.widget.TextView[@text='%s']"};
     public String[] cbAllDay = new String[] {"id","org.withouthat.acalendar:id/alldayCB"};
     public String[] startTime = new String[] {"id","org.withouthat.acalendar:id/startTime"};
+    public String[] selectTime = new String[] {"id", "org.withouthat.acalendar:id/mdtp_time_picker"};
 }

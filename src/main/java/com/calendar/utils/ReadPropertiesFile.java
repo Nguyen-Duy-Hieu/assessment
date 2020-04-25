@@ -22,6 +22,11 @@ public class ReadPropertiesFile {
 			FileReader reader=new FileReader(resourcesDirectory.getAbsolutePath()+"/calendar.properties");
 			properties=new Properties();
 			properties.load(reader);
+
+			reader=new FileReader(resourcesDirectory.getAbsolutePath()+"/forecast.properties");
+			Properties properties2 =new Properties();
+			properties2.load(reader);
+			properties.putAll(properties2);
 		}
 		catch(Exception e){
 			e.printStackTrace();

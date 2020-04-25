@@ -1,16 +1,6 @@
 package com.calendar.constants;
 
 public class PropertyConstants {
-	public static String USERNAME = "user.emailaddress";
-	public static String PASSWORD = "user.password";
-
-	public static String FULLNAME = "user.username";
-	public static String PHONENUMBER = "user.phonenumber";
-	public static String ADDRESS = "user.address";
-	public static String POSTALCODE = "user.postcode";
-	public static String CARDNAME = "user.cardName";
-	public static String CARDNUMBER = "user.cardNumber";
-
 	public static String HOLIDAY = "holiday";
 	public static String PLATFORM_NAME = "android.realdevice.platform_name";
 	public static String DEVICE_NAME = "android.realdevice.device_name";
@@ -35,6 +25,8 @@ public class PropertyConstants {
 	public static String APPIUM_SERVER_DEFAULT_ACCESS_PATH = "appium.server.default.access.path";
 	
 	public static String ANDROID_ORIENTATION_MODE = "android.device.orientation";
-
 	public static String EXECUTION_ENVIRONMENT = "test.execution.environment";
+
+	public static String SYSNEY_ID = "sydney.id";
+	public static String USER_APP_KEY = "user.api.key";
 }
