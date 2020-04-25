@@ -21,8 +21,8 @@ public class HomePageSteps extends BasePOM {
 
     @When("^It is not a weekend$")
     public void IsItNotAWeekend() throws Exception {
-        /*if(DateTimeUtils.isWeekend(DateTimeUtils.getCurrentDateSydney()))
-            throw new Exception("Today is weekend");*/
+        if(DateTimeUtils.isWeekend(DateTimeUtils.getCurrentDateSydney()))
+            throw new Exception("Today is weekend");
     }
 
 
