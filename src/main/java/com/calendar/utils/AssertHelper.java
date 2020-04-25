@@ -25,5 +25,4 @@ public class AssertHelper{
 		LOG.info("Asserting the MobileElement value");
 		Assert.assertNotNull(element);
 	}
-
 }

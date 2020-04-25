@@ -10,6 +10,7 @@ import freemarker.template.utility.DateUtil;
 
 
 public class HomePageSteps extends BasePOM {
+
     @Given("^I have launched the Calendar App$")
     public void userAccessedApp() {
         System.out.println("Calendar App is loading");
