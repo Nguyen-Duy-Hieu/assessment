@@ -37,7 +37,7 @@ public class NewMeetingPage extends BasePOM {
         if(cbAllDay.isSelected())
             appHelper().clickByElement(newMeetingPage.cbAllDay[0], newMeetingPage.cbAllDay[1]);
 
-        if(duration.equals("30'")) {
+        if(duration.equals("30")) {
             appHelper().clickByElement(newMeetingPage.cbDuration[0], newMeetingPage.cbDuration[1]);
             appHelper().scrollToElement(newMeetingPage.selectDuration30Minute[0], newMeetingPage.selectDuration30Minute[1]);
             appHelper().captureScreenShots();

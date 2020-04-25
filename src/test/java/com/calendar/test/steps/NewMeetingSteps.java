@@ -12,7 +12,7 @@ public class NewMeetingSteps extends BasePOM {
         newMeetingPage().setTitle(title);
     }
 
-    @And("^Set Meeting duration as (.*) in the evening$")
+    @And("^Set Meeting duration as (.*) in the evening (.*)$")
     public void setMeetingDurationAsDurationInTheEvening(String duration) {
         newMeetingPage().selectDuration(duration);
     }

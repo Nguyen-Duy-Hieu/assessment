@@ -1,5 +1,6 @@
 package com.calendar.base;
 
+import com.calendar.pages.ConfirmMettingDialogPage;
 import com.calendar.pages.HomePage;
 import com.calendar.pages.NewMeetingPage;
 import org.apache.log4j.Logger;
@@ -15,8 +16,8 @@ public class BasePOM {
 	
 	HomePage homePage;
 	NewMeetingPage newMeetingPage;
+	ConfirmMettingDialogPage mettingDialogPage;
 
-	APPHelper appiumUtils;
 	AndroidDriver<MobileElement> driver;
 	APPHelper appHelper;
 	
@@ -42,5 +43,11 @@ public class BasePOM {
 		if(newMeetingPage == null)
 			newMeetingPage = new NewMeetingPage();
 		return newMeetingPage;
+	}
+
+	public ConfirmMettingDialogPage mettingDialogPage() {
+		if(mettingDialogPage == null)
+			mettingDialogPage = new ConfirmMettingDialogPage();
+		return mettingDialogPage;
 	}
 }

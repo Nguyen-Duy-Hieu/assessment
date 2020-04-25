@@ -6,7 +6,6 @@ public class HomePagePO {
     public String[] allowAccessContactButton = new String[] {"id","com.android.permissioncontroller:id/permission_allow_button"};
     public String[] allowCalendarButton = new String[] {"id","com.android.permissioncontroller:id/permission_allow_button"};
     public String[] addNewMeeting = new String[] {"id","org.withouthat.acalendar:id/menu_add"};
-    public String[] checkMeeting = new String[] {"xpath","//android.widget.TextView[contains(@content-desc,'%s')"};
-
+    public String[] checkMeeting = new String[] {"xpath","//android.widget.TextView[contains(@content-desc,'%s')]"};
 
 }

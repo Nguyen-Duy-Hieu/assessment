@@ -29,8 +29,8 @@ public class HomePage extends BasePOM {
         appHelper().clickByElement(homePage.addNewMeeting[0], homePage.addNewMeeting[1]);
     }
 
-    public void verifyMeeting(String contact) {
-        boolean meeting = appHelper().isElementDisplayed(homePage.checkMeeting[0], String.format(homePage.checkMeeting[1], contact));
-        AssertHelper.assertTrue(meeting);
+    public void viewMeetingNote(String meeting) {
+        appHelper().captureScreenShots();
+        appHelper().clickByElement(homePage.checkMeeting[0], String.format(homePage.checkMeeting[1], meeting));
     }
 }
