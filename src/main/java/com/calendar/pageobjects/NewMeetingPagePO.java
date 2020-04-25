@@ -9,4 +9,5 @@ public class NewMeetingPagePO {
     public String[] searchContact = new String[] {"id","com.samsung.android.app.contacts:id/search_src_text"};
     public String[] selectContact = new String[] {"xpath","//android.widget.TextView[@text='%s']"};
     public String[] cbAllDay = new String[] {"id","org.withouthat.acalendar:id/alldayCB"};
+    public String[] startTime = new String[] {"id","org.withouthat.acalendar:id/startTime"};
 }

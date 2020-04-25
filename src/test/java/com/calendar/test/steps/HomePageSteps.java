@@ -32,8 +32,9 @@ public class HomePageSteps extends BasePOM {
             throw new Exception("Today is holiday");
     }
 
-    @Then("^I Check if the meeting is created as expected Note (.*)$")
-    public void iCheckIfTheMeetingIsCreatedAsExpectedNote(String contact) {
-        homePage().verifyMeeting(contact);
+    @Then("^I Check if the meeting is created as expected Note title (.*) time (.*) duration (.*) people (.*)$")
+    public void iCheckIfTheMeetingIsCreatedAsExpectedNote(String title, String time, String duration, String contact) {
+        homePage().viewMeetingNote(title);
+        mettingDialogPage().verifyMeetingNote(title, time, duration, contact);
     }
 }
