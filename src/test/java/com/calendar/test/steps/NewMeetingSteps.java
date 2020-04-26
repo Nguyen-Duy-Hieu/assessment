@@ -6,10 +6,11 @@ import cucumber.api.java.en.Then;
 
 public class NewMeetingSteps extends BasePOM {
 
-    @Then("^I want to book a meeting with the title (.*)$")
-    public void iWantToBookAMeetingWithTheTitleTitle(String title) {
+    @Then("^I want to book a meeting with the title (.*) date (.*)$")
+    public void iWantToBookAMeetingWithTheTitleTitle(String title, String date) {
         homePage().createNewMeeting();
         newMeetingPage().setTitle(title);
+        newMeetingPage().setDay(date);
     }
 
     @And("^Set Meeting duration as (.*) in the evening$")

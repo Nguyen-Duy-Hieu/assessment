@@ -2,6 +2,7 @@ package com.calendar.pages;
 
 import com.calendar.base.BasePOM;
 import com.calendar.pageobjects.NewMeetingPagePO;
+import com.calendar.utils.DateTimeUtils;
 import com.calendar.utils.DeviceActionUtils;
 import io.appium.java_client.MobileElement;
 
@@ -12,6 +13,19 @@ public class NewMeetingPage extends BasePOM {
     public void setTitle(String title){
         appHelper().captureScreenShots();
         appHelper().enterTextWithKeyPad(newMeetingPage.txtTitle[0], newMeetingPage.txtTitle[1], title);
+    }
+
+    public void setDay(String date){
+        // due to issue click need to add one more day to select correctly
+        String newDate = DateTimeUtils.addOneDay(date);
+
+        String[] days = newDate.split("/");
+        appHelper().captureScreenShots();
+        appHelper().clickByElement(newMeetingPage.startDay[0], newMeetingPage.startDay[1]);
+
+        appHelper().scrolltoElementAndClick(newMeetingPage.selectDate[0],
+                String.format(newMeetingPage.selectDate[1], days[2], days[1] + " " + days[0]));
+        appHelper().clickByElement(newMeetingPage.acceptButton[0], newMeetingPage.acceptButton[1]);
     }
 
     public void selectContact(String contact){

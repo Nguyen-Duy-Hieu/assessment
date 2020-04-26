@@ -31,6 +31,6 @@ public class HomePage extends BasePOM {
 
     public void viewMeetingNote(String meeting) {
         appHelper().captureScreenShots();
-        appHelper().clickByElement(homePage.checkMeeting[0], String.format(homePage.checkMeeting[1], meeting));
+        appHelper().scrolltoElementAndClick(homePage.checkMeeting[0], String.format(homePage.checkMeeting[1], meeting));
     }
 }

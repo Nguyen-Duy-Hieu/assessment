@@ -9,6 +9,12 @@ public class NewMeetingPagePO {
     public String[] searchContact = new String[] {"id","com.samsung.android.app.contacts:id/search_src_text"};
     public String[] selectContact = new String[] {"xpath","//android.widget.TextView[@text='%s']"};
     public String[] cbAllDay = new String[] {"id","org.withouthat.acalendar:id/alldayCB"};
-    public String[] startTime = new String[] {"id","org.withouthat.acalendar:id/startTime"};
-    public String[] selectTime = new String[] {"id", "org.withouthat.acalendar:id/mdtp_time_picker"};
+    public String[] startDay = new String[] {"id","org.withouthat.acalendar:id/startDate"};
+    public String[] selectDate = new String[] {"xpath","//android.view.View[contains(@content-desc,'%s')][contains(@content-desc,'%s')]"};
+    public String[] acceptButton = new String[] {"id","org.withouthat.acalendar:id/mdtp_ok"};
+
+
+//android.view.View[contains(@content-desc,'29')][contains(@content-desc,'4 2019')]
+    //android.view.View[@content-desc="09 tháng 4 2020"]
+
 }
