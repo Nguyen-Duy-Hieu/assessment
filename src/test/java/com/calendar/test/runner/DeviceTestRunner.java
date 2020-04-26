@@ -10,13 +10,15 @@ import java.io.File;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {"src/test/resources/featureFiles"},glue= {"com.calendar.test.steps","com.calendar.utils"},
-plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"}, tags= {"@regression"})
+        plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"}, tags= {"@regression"})
 
 public class DeviceTestRunner {
-	
+
 	@AfterClass
     public static void writeExtentReport() {
 		System.out.println("started rinning after calss annotation in TestRunner");
-        Reporter.loadXMLConfig(new File("config/report.xml"));
+        Reporter.loadXMLConfig(new File("extent-config.xml"));
     }
 }
+
+
