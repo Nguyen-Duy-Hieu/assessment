@@ -22,7 +22,7 @@ public class DateTimeUtils {
         }
     }
 
-    private static final String DEFAULT_DATE_FORMAT = "yyyy/MM/dd";
+    private static final String DEFAULT_DATE_FORMAT = "yyyy/M/d";
     private static DateTimeFormatter dtf;
 
     private static String getCurrentDateDueToUTC(UTC utc) {
@@ -43,7 +43,7 @@ public class DateTimeUtils {
 
     /*
         is weekend
-        date is format "yyyy-MM-dd"
+        date is format "yyyy/M/d"
      */
 
     public static boolean isWeekend(String date){
@@ -58,10 +58,24 @@ public class DateTimeUtils {
     /*
         define a list holiday in calendar properties
         each date spit by comma
+        date is format "yyyy/M/d"
      */
 
     public static boolean isHoliday(String date){
         String holiday = ReadPropertiesFile.GetProperty(PropertyConstants.HOLIDAY);
         return holiday.indexOf(date) > -1;
+    }
+
+    /*
+        define a list holiday in calendar properties
+        each date spit by comma
+        date is format "yyyy/M/d"
+     */
+
+    public static String addOneDay(String date){
+        dtf = DateTimeFormatter.ofPattern(DEFAULT_DATE_FORMAT);
+        LocalDate localDate = LocalDate.parse(date, dtf);
+        LocalDate now = localDate.plusDays(1);
+        return dtf.format(now);
     }
 }

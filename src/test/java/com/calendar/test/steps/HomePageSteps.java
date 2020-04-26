@@ -20,16 +20,16 @@ public class HomePageSteps extends BasePOM {
         homePage().acceptPhoneContactAndCalendar();;
     }
 
-    @When("^It is not a weekend$")
-    public void IsItNotAWeekend() throws Exception {
-        if(DateTimeUtils.isWeekend(DateTimeUtils.getCurrentDateSydney()))
+    @When("^It is not a weekend (.*)$")
+    public void IsItNotAWeekend(String date) throws Exception {
+        if(DateTimeUtils.isWeekend(date))
             throw new Exception("Today is weekend");
     }
 
 
-    @And("^It is not a public holiday$")
-    public void IsItNotAPublicHoliday() throws Exception {
-        if(DateTimeUtils.isHoliday(DateTimeUtils.getCurrentDateSydney()))
+    @And("^It is not a public holiday (.*)$")
+    public void IsItNotAPublicHoliday(String date) throws Exception {
+        if(DateTimeUtils.isHoliday(date))
             throw new Exception("Today is holiday");
     }
 
