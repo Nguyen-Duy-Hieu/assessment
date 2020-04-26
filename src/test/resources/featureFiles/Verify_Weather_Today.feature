@@ -1,5 +1,6 @@
 Feature: Verify the weather Sydney today
 
+  @regression
   Scenario Outline: A happy holidaymaker
     Given I like to holiday in <city>
     And I look up the weather forecast today <city>

@@ -31,6 +31,11 @@ public class Hooks {
             configureAndroidEmulator();
     }
 
+    @Before("@api")
+    public void setupDriverDetailsAPI() {
+        LOG.info("Intiating the drivers based onf properties file configuration");
+    }
+
     @After
     public void tearDown() {
         if (driver != null)
